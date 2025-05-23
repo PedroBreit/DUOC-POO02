@@ -10,7 +10,7 @@ public class Cliente {
     private String telefono;
     private Cuenta cuenta;
 
-    public Cliente(String nombre, String rut, String apellidoPaterno, String apellidoMaterno, String domicilio, String comuna, String telefono, long numeroCuenta) {
+    public Cliente(String nombre, String rut, String apellidoPaterno, String apellidoMaterno, String domicilio, String comuna, String telefono, Cuenta cuenta) {
         if (!Validadores.validarFormatoRut(rut)) {
             throw new IllegalArgumentException("El Rut no es valido.");
         }
@@ -22,7 +22,7 @@ public class Cliente {
         this.domicilio = domicilio;
         this.comuna = comuna;
         this.telefono = telefono;
-        this.cuenta = new Cuenta(numeroCuenta); // Se inicia con saldo 0
+        this.cuenta = cuenta; // Se inicia con saldo 0
     }
 
     public String getRut() {
@@ -38,7 +38,7 @@ public class Cliente {
     }
 
     public void mostrarDatos() {
-        System.out.println("\n===== Datos del Cliente =====");
+        System.out.println("\n=============================\n-     Datos del Cliente     -\n=============================");
         System.out.println("Nombre: " + nombre);
         System.out.println("RUT: " + rut);
         System.out.println("Apellido Paterno: " + apellidoPaterno);

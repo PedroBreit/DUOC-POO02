@@ -10,20 +10,22 @@ public class Exp1_S1_Grupo1 {
 
         System.out.println("Bienvenido a Bank Boston");
         do {
-            System.out.println("\n===== MENÚ PRINCIPAL =====");
+            System.out.println("\n===========================\n-     MENÚ PRINCIPAL     -\n===========================");
             System.out.println("1. Registrar cliente");
             System.out.println("2. Ver datos de cliente");
             System.out.println("3. Depositar");
             System.out.println("4. Girar");
             System.out.println("5. Consultar saldo");
             System.out.println("6. Salir");
+            System.out.println("===========================");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine();
+            
 
             switch (opcion) {
                 case 1:
-                    System.out.println("\n--- Registro de Cliente ---");
+                    System.out.println("\n===========================\n-   Registro de Cliente   -\n===========================");
                     System.out.print("RUT (incluyendo puntos y guion): ");
                     String rut = scanner.nextLine();
 
@@ -50,29 +52,30 @@ public class Exp1_S1_Grupo1 {
                     System.out.print("Teléfono: ");
                     String telefono = scanner.nextLine();
 
-                    System.out.print("Número de cuenta corriente (9 dígitos): ");
-                    long numeroCuenta = scanner.nextLong();
-                    scanner.nextLine();
+                    Cuenta nuevaCuenta;
+                    long numeroCuentaGenerada;
 
-                    if (clientesPorCuenta.containsKey(numeroCuenta)) {
-                        System.out.println("Ya existe un cliente con ese número de cuenta.");
-                        break;
-                    }
+                    do {
+                        nuevaCuenta = new Cuenta();
+                        numeroCuentaGenerada = nuevaCuenta.getNumeroCuenta();
+                    } while (clientesPorCuenta.containsKey(numeroCuentaGenerada));
 
                     try {
-                        Cliente cliente = new Cliente(nombre, rut, apellidoPaterno, apellidoMaterno, domicilio, comuna, telefono, numeroCuenta);
+                        Cliente cliente = new Cliente(nombre, rut, apellidoPaterno, apellidoMaterno, domicilio, comuna, telefono, nuevaCuenta);
                         clientesPorRut.put(rut, cliente);
-                        clientesPorCuenta.put(numeroCuenta, cliente);
+                        clientesPorCuenta.put(numeroCuentaGenerada, cliente);
                         System.out.println("Cliente registrado correctamente.");
                     } catch (Exception e) {
                         System.out.println("Error al registrar: " + e.getMessage());
                     }
+                    System.out.println("===========================");
                     break;
 
                 case 2:
-                    System.out.print("Ingrese RUT del cliente: ");
+                    System.out.print("\n-------------------------------------\nIngrese RUT del cliente: ");
                     String rutConsulta = scanner.nextLine();
                     Cliente clienteConsulta = clientesPorRut.get(rutConsulta);
+                    System.out.println("-------------------------------------");
                     if (clienteConsulta != null) {
                         clienteConsulta.mostrarDatos();
                     } else {
@@ -81,27 +84,28 @@ public class Exp1_S1_Grupo1 {
                     break;
 
                 case 3:
-                    System.out.print("Ingrese número de cuenta: ");
+                    System.out.print("\n-----------------------------------\nIngrese número de cuenta: ");
                     long cuentaDeposito = scanner.nextLong();
                     scanner.nextLine();
                     Cliente clienteDeposito = clientesPorCuenta.get(cuentaDeposito);
                     if (clienteDeposito != null) {
-                        System.out.print("Ingrese monto a depositar: ");
+                        System.out.print("Ingrese monto a depositar: $");
                         double monto = scanner.nextDouble();
                         scanner.nextLine();
                         clienteDeposito.getCuenta().depositar(monto);
                     } else {
-                        System.out.println("Cuenta no encontrada.");
+                        System.out.println("\n-----------------------------------\nCuenta no encontrada.");
                     }
+                    System.out.println("-----------------------------------");
                     break;
 
                 case 4:
-                    System.out.print("Ingrese número de cuenta: ");
+                    System.out.print("\n-----------------------------------\nIngrese número de cuenta: ");
                     long cuentaGiro = scanner.nextLong();
                     scanner.nextLine();
                     Cliente clienteGiro = clientesPorCuenta.get(cuentaGiro);
                     if (clienteGiro != null) {
-                        System.out.print("Ingrese monto a girar: ");
+                        System.out.print("Ingrese monto a girar: $");
                         double monto = scanner.nextDouble();
                         scanner.nextLine();
                         clienteGiro.getCuenta().girar(monto);
@@ -111,7 +115,7 @@ public class Exp1_S1_Grupo1 {
                     break;
 
                 case 5:
-                    System.out.print("Ingrese número de cuenta: ");
+                    System.out.print("\n---------------------\nIngrese número de cuenta: ");
                     long cuentaSaldo = scanner.nextLong();
                     scanner.nextLine();
                     Cliente clienteSaldo = clientesPorCuenta.get(cuentaSaldo);
