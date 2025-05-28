@@ -1,11 +1,12 @@
 package exp1_s2_grupo1;
 
-public class Cuenta_Credito extends Cuenta {
+public class Cuenta_Credito extends Cuenta implements Transacciones {
     private double limiteCredito;
 
     public Cuenta_Credito(double limiteCredito) {
         super();
         this.limiteCredito = limiteCredito;
+        this.saldo = limiteCredito;
     }
 
     @Override
@@ -14,27 +15,47 @@ public class Cuenta_Credito extends Cuenta {
             System.out.println("--------------------------------------------------\nEl monto a girar debe ser mayor que cero.");
             return;
         }
-        if (saldo + monto > limiteCredito) {
+        if (monto > saldo) {
             System.out.println("------------------------------------------\nCrédito insuficiente. Giro rechazado.");
             return;
         }
-        saldo += monto; // aumenta la deuda
-        System.out.println("-----------------------------------\nCrédito utilizado.\nDeuda acumulada: $" + saldo + "\n-----------------------------------");
+        saldo -= monto;
+        double utilizado = limiteCredito - saldo;
+        System.out.println("-----------------------------------\nCrédito utilizado.\nDisponible: $" + saldo + "\nDeuda: $"+ utilizado + "\n-----------------------------------");
     }
 
-    public void pagarCredito(double monto) {
+    @Override
+    public void depositar(double monto) {
         if (monto <= 0) {
             System.out.println("--------------------------------------------------\nEl monto a pagar debe ser mayor que cero.");
             return;
         }
-        if (monto > saldo) {
-            monto = saldo; // no se puede pagar más de lo que se debe
+        if (saldo + monto > limiteCredito) {
+            System.out.println("--------------------------------------------------\nUsted esta ingresando mas dinero del que deber, vuelva a intentar.");
+            return;
         }
-        saldo -= monto;
-        System.out.println("-----------------------------------\nPago realizado.\nDeuda restante: $" + saldo + "\n-----------------------------------");
+        saldo += monto;
+        System.out.println("-----------------------------------\nPago realizado.\nCrédito disponible: $" + saldo + "\n-----------------------------------");
     }
 
     public double obtenerCreditoDisponible() {
         return limiteCredito - saldo;
     }
+    
+    @Override
+    public void consultarSaldo() {
+        double deuda = limiteCredito - saldo;
+        System.out.println("-----------------------------------");
+        System.out.println("Deuda actual: $" + deuda);
+        System.out.println("Credito disponible: $" + saldo);
+        System.out.println("-----------------------------------");
+    }
+    @Override
+    public String toString() {
+        return "Cuenta Crédito #" + getNumeroCuenta() +
+               "\nLímite de crédito: $" + limiteCredito +
+               "\nCrédito disponible: $" + saldo +
+               "\nDeuda actual: $" + (limiteCredito - saldo);
+    }
+    
 }

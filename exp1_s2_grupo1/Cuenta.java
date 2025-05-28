@@ -1,7 +1,7 @@
 
 package exp1_s2_grupo1;
 
-public abstract class Cuenta {
+public abstract class Cuenta{
     private long numeroCuenta;
     protected double saldo;
 
@@ -9,7 +9,7 @@ public abstract class Cuenta {
     public Cuenta() {
         this.numeroCuenta = generarNumeroCuenta();
         this.saldo = 0.0;
-        System.out.println("----------------------------\nNúmero de cuenta: " + this.numeroCuenta + "\n----------------------------");
+        System.out.println("----------------------------");
     }
 
     // Método privado para generar un número de 9 dígitos
@@ -46,6 +46,8 @@ public abstract class Cuenta {
     public String toString() {
         return  "Número de Cuenta = " + numeroCuenta +
                 "\nSaldo = $" + saldo +
-                "\n=============================";
+                "\n-----------------------------";
     }
+    
 }
+    

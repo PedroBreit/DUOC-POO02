@@ -61,8 +61,7 @@ public class Cliente {
             System.out.println("Este cliente no tiene cuentas aún.");
         } else {
             for (Map.Entry<String, Cuenta> entry : cuentas.entrySet()) {
-                System.out.println("Tipo de cuenta: " + entry.getKey());
-                System.out.println(entry.getValue());
+                System.out.println(entry.getValue() + "\n-----------------------------");
             }
         }
     }

@@ -13,15 +13,13 @@ public class Exp1_S2_Grupo1 {
             System.out.println("\n===========================\n-     MENÚ PRINCIPAL     -\n===========================");
             System.out.println("1. Registrar cliente");
             System.out.println("2. Ver datos de cliente");
-            System.out.println("3. Depositar");
+            System.out.println("3. Depositar / Pagar Credito");
             System.out.println("4. Girar");
             System.out.println("5. Consultar saldo");
             System.out.println("6. Salir");
             System.out.println("===========================");
-            System.out.print("Seleccione una opción: ");
-            opcion = scanner.nextInt();
-            scanner.nextLine();
-
+            opcion = Validadores.leerEnteroValido(scanner, "Seleccione una opción: ");
+            
             switch (opcion) {
                 case 1:
                     System.out.println("\n===========================\n-   Registro de Cliente   -\n===========================");
@@ -31,18 +29,12 @@ public class Exp1_S2_Grupo1 {
                     boolean nuevoCliente = false;
                     
                     if(cliente == null){
-                        System.out.print("Nombre: ");
-                        String nombre = scanner.nextLine();
-                        System.out.print("Apellido Paterno: ");
-                        String apellidoPaterno = scanner.nextLine();
-                        System.out.print("Apellido Materno: ");
-                        String apellidoMaterno = scanner.nextLine();
-                        System.out.print("Domicilio: ");
-                        String domicilio = scanner.nextLine();
-                        System.out.print("Comuna: ");
-                        String comuna = scanner.nextLine();
-                        System.out.print("Teléfono: ");
-                        String telefono = scanner.nextLine();
+                        String nombre = Validadores.leerTextoNoVacio(scanner, "Nombre: ");
+                        String apellidoPaterno = Validadores.leerTextoNoVacio(scanner, "Apellido paterno: ");
+                        String apellidoMaterno = Validadores.leerTextoNoVacio(scanner, "Apellido materno: ");
+                        String domicilio = Validadores.leerTextoNoVacio(scanner, "Domicilio: ");
+                        String comuna = Validadores.leerTextoNoVacio(scanner, "Comuna: ");
+                        String telefono = Validadores.leerTextoNoVacio(scanner, "Teléfono: ");
                         cliente = new Cliente(nombre, rut, apellidoPaterno, apellidoMaterno, domicilio, comuna, telefono);
                         nuevoCliente = true;
                     }
@@ -51,10 +43,7 @@ public class Exp1_S2_Grupo1 {
                     System.out.println("1. Cuenta de Ahorro");
                     System.out.println("2. Cuenta Corriente");
                     System.out.println("3. Cuenta de Crédito");
-                    System.out.print("Opción: ");
-                    int tipoCuenta = scanner.nextInt();
-                    scanner.nextLine();
-
+                    int tipoCuenta = Validadores.leerEnteroValido(scanner, "Seleccione una opción: ");
                     String tipoStr = switch(tipoCuenta){
                         case 1 -> "Ahorro";
                         case 2 -> "Corriente";
@@ -74,21 +63,15 @@ public class Exp1_S2_Grupo1 {
                     Cuenta nuevaCuenta = null;
                     switch (tipoCuenta) {
                         case 1:
-                            System.out.print("Ingrese tasa de interés (%): ");
-                            double interes = scanner.nextDouble();
-                            scanner.nextLine();
+                            double interes = Validadores.leerDoubleValido(scanner, "Ingrese tasa de interés anual (%): ");
                             nuevaCuenta = new Cuenta_Ahorro(interes/100);
                             break;
                         case 2:
-                            System.out.print("Ingrese límite de sobregiro: $");
-                            double sobregiro = scanner.nextDouble();
-                            scanner.nextLine();
+                            double sobregiro = Validadores.leerDoubleValido(scanner, "Ingrese límite de sobregiro: $");
                             nuevaCuenta = new Cuenta_Corriente(sobregiro);
                             break;
                         case 3:
-                            System.out.print("Ingrese límite de crédito: $");
-                            double limiteCredito = scanner.nextDouble();
-                            scanner.nextLine();
+                            double limiteCredito = Validadores.leerDoubleValido(scanner, "Ingrese límite de crédito: $");
                             nuevaCuenta = new Cuenta_Credito(limiteCredito);
                             break;
                     }
@@ -98,12 +81,12 @@ public class Exp1_S2_Grupo1 {
                     if(nuevoCliente){
                         clientesPorRut.put(rut, cliente);
                     }
-                    System.out.println("Cuenta " + tipoStr + "registrada exitosamente. \nNúmero de cuenta: " +  nuevaCuenta.getNumeroCuenta());
+                    System.out.println("Cuenta " + tipoStr + " registrada exitosamente. \nNúmero de cuenta: " +  nuevaCuenta.getNumeroCuenta());
                     break;
 
                 case 2:
-                    System.out.print("\n-------------------------------------\nIngrese RUT del cliente: ");
-                    String rutConsulta = scanner.nextLine();
+                    System.out.print("\n-------------------------------------");
+                    String rutConsulta = Validadores.leerTextoNoVacio(scanner, "Ingrese RUT del cliente: ");
                     Cliente clienteConsulta = clientesPorRut.get(rutConsulta);
                     System.out.println("-------------------------------------");
                     if (clienteConsulta != null) {
@@ -114,9 +97,8 @@ public class Exp1_S2_Grupo1 {
                     break;
 
                 case 3:
-                    System.out.print("\n-----------------------------------\nIngrese número de cuenta: ");
-                    long cuentaDeposito = scanner.nextLong();
-                    scanner.nextLine();
+                    System.out.print("\n-----------------------------------");
+                    long cuentaDeposito = Validadores.leerLongValido(scanner, "Ingrese número de cuenta: ");
                     Cliente clienteDeposito = clientesPorCuenta.get(cuentaDeposito);
                     if (clienteDeposito == null){
                         System.out.println("Cuenta no encontrada.");
@@ -127,17 +109,14 @@ public class Exp1_S2_Grupo1 {
                         System.out.println("No se encontro la cuenta asociada.");
                         break;
                     }
-                    
-                    System.out.print("Ingrese monto a depositar: $ ");
-                    double monto =scanner.nextDouble();
-                    scanner.nextLine();
+                    cuentaDep.consultarSaldo();
+                    double monto = Validadores.leerDoubleValido(scanner, "Ingrese monto a depositar: $");
                     cuentaDep.depositar(monto);
                     break;
 
                 case 4:
-                    System.out.print("\n-----------------------------------\nIngrese número de cuenta: ");
-                    long cuentaGiro = scanner.nextLong();
-                    scanner.nextLine();
+                    System.out.print("\n-----------------------------------");
+                    long cuentaGiro = Validadores.leerLongValido(scanner, "Ingrese número de cuenta: ");
                     Cliente clienteGiro = clientesPorCuenta.get(cuentaGiro);
                     if (clienteGiro == null) {
                         System.out.print("Cunta no encontrada");
@@ -148,17 +127,14 @@ public class Exp1_S2_Grupo1 {
                     if(cuentaGr == null){
                         System.out.println("No se encontro la cuenta asosciada");
                     }
-                    
-                    System.out.print("Ingrese monto a girar: $ ");
-                    double montoGiro = scanner.nextDouble();
-                    scanner.nextLine();
+                    cuentaGr.consultarSaldo();
+                    double montoGiro = Validadores.leerDoubleValido(scanner, "Ingrese monto a retirar: $");
                     cuentaGr.girar(montoGiro);
                     break;
 
                 case 5:
-                    System.out.print("\n---------------------\nIngrese número de cuenta: ");
-                    long cuentaSaldo = scanner.nextLong();
-                    scanner.nextLine();
+                    System.out.print("\n-----------------------------------");
+                    long cuentaSaldo = Validadores.leerLongValido(scanner, "Ingrese número de cuenta: ");
                     Cliente clienteSaldo = clientesPorCuenta.get(cuentaSaldo);
                     if(clienteSaldo == null){
                         System.out.print("Cunta no encontrada");
