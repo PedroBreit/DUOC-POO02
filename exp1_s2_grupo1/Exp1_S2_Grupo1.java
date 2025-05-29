@@ -1,5 +1,20 @@
 package exp1_s2_grupo1;
 
+  /*Creo que la intension del trabajo es poder acceder a los 3 productos CC, C.Ahorro, Credito pudiendo contratar solo 1 producto de cada 1.
+    En ese escenario se produce un conflicto a la hora de dejar unido el registro del cliente con el de las cuentas.
+    Solucion: Dejar el registro de Cliente por una parte y unir las cuentas al rut del cliente por medio de un HM. Construir un Hashmap <rut,cliente>
+    Al miso tiempo construir un HM CCorriente <rut,CCorriente>, <rut,C.Ah>, <rut,CCredito>, una para cada producto,
+    de esta forma si el cliente tiene una cuenta almacenada en el MP no puede crear una nueva
+    Validar por numero de cuenta es poco practico ya que obtienes Numeros de Cuenta diferentes para cada producto. Al validar por el rut validas desde una
+    informacion conocida del cliente. 
+    Otro detalle que pude observar es que le estas dejando al cliente la libertad de ingresar la tasa de interes.
+    Pudiendo ingresar una tasa por ejemplo de 100% de retorno en las cuentas.
+    Solucion: dejar una tasa de interes fijo para cada producto 
+    Para las cuentas de ahorro y Credito se puede implmentar una tasa fija de un 5% anual
+    Aun estoy terminando mi propuesta para poder aplicar e integrar la informacion de las clases. 
+    Esto es lo que puedo compartir por ahora. El viernes podria aplicarme mas al trabajo grupal. 
+    */    
+
 import java.util.*;
 
 public class Exp1_S2_Grupo1 {
@@ -21,7 +36,7 @@ public class Exp1_S2_Grupo1 {
             opcion = Validadores.leerEnteroValido(scanner, "Seleccione una opción: ");
             
             switch (opcion) {
-                case 1:
+                case 1: 
                     System.out.println("\n===========================\n-   Registro de Cliente   -\n===========================");
                     System.out.print("RUT (incluyendo puntos y guion): ");
                     String rut = scanner.nextLine();
