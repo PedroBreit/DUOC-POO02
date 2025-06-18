@@ -1,0 +1,104 @@
+Titulo,Autor,Genero,ISBN,Estado
+Cien años de soledad,Gabriel García Márquez,Realismo mágico,978-84-376-0494-7,Disponible
+Don Quijote de la Mancha,Miguel de Cervantes,Novela clásica,978-84-376-0495-4,Prestado
+La casa de los espíritus,Isabel Allende,Realismo mágico,978-84-376-0496-1,Disponible
+El amor en los tiempos del cólera,Gabriel García Márquez,Romance,978-84-376-0497-8,Disponible
+Rayuela,Julio Cortázar,Ficción experimental,978-84-376-0498-5,Disponible
+La sombra del viento,Carlos Ruiz Zafón,Misterio,978-84-376-0499-2,Disponible
+Como agua para chocolate,Laura Esquivel,Realismo mágico,978-84-376-0500-5,Disponible
+El túnel,Ernesto Sábato,Ficción psicológica,978-84-376-0501-2,Disponible
+Pedro Páramo,Juan Rulfo,Realismo mágico,978-84-376-0502-9,Disponible
+La ciudad y los perros,Mario Vargas Llosa,Drama social,978-84-376-0503-6,Disponible
+Ficciones,Jorge Luis Borges,Cuentos,978-84-376-0504-3,Disponible
+El coronel no tiene quien le escriba,Gabriel García Márquez,Realismo social,978-84-376-0505-0,Disponible
+Bestiario,Julio Cortázar,Cuentos,978-84-376-0506-7,Disponible
+La tregua,Mario Benedetti,Drama,978-84-376-0507-4,Disponible
+El laberinto de la soledad,Octavio Paz,Ensayo,978-84-376-0508-1,Disponible
+Todos los fuegos el fuego,Julio Cortázar,Cuentos,978-84-376-0509-8,Disponible
+La casa verde,Mario Vargas Llosa,Novela social,978-84-376-0510-4,Disponible
+El Aleph,Jorge Luis Borges,Cuentos fantásticos,978-84-376-0511-1,Disponible
+Crónica de una muerte anunciada,Gabriel García Márquez,Novela corta,978-84-376-0512-8,Disponible
+Los detectives salvajes,Roberto Bolaño,Ficción contemporánea,978-84-376-0513-5,Disponible
+La muerte de Artemio Cruz,Carlos Fuentes,Novela histórica,978-84-376-0514-2,Disponible
+El reino de este mundo,Alejo Carpentier,Realismo mágico,978-84-376-0515-9,Disponible
+Conversación en La Catedral,Mario Vargas Llosa,Novela política,978-84-376-0516-6,Disponible
+62 Modelo para armar,Julio Cortázar,Ficción experimental,978-84-376-0517-3,Disponible
+El juego de la rayuela,Julio Cortázar,Ficción,978-84-376-0518-0,Disponible
+La región más transparente,Carlos Fuentes,Novela urbana,978-84-376-0519-7,Disponible
+El siglo de las luces,Alejo Carpentier,Novela histórica,978-84-376-0520-3,Disponible
+Sobre héroes y tumbas,Ernesto Sábato,Ficción psicológica,978-84-376-0521-0,Disponible
+La hojarasca,Gabriel García Márquez,Realismo social,978-84-376-0522-7,Disponible
+Terra Nostra,Carlos Fuentes,Novela histórica,978-84-376-0523-4,Disponible
+Los pasos perdidos,Alejo Carpentier,Aventura,978-84-376-0524-1,Disponible
+La mala hora,Gabriel García Márquez,Drama social,978-84-376-0525-8,Disponible
+El obsceno pájaro de la noche,José Donoso,Gótico,978-84-376-0526-5,Disponible
+Aura,Carlos Fuentes,Terror psicológico,978-84-376-0527-2,Disponible
+Los ríos profundos,José María Arguedas,Indigenismo,978-84-376-0528-9,Disponible
+El llano en llamas,Juan Rulfo,Cuentos,978-84-376-0529-6,Disponible
+La guerra del fin del mundo,Mario Vargas Llosa,Novela histórica,978-84-376-0530-2,Disponible
+Final del juego,Julio Cortázar,Cuentos,978-84-376-0531-9,Disponible
+El otoño del patriarca,Gabriel García Márquez,Dictadura,978-84-376-0532-6,Disponible
+Pantaleón y las visitadoras,Mario Vargas Llosa,Sátira,978-84-376-0533-3,Disponible
+Los cachorros,Mario Vargas Llosa,Novela corta,978-84-376-0534-0,Disponible
+El lugar sin límites,José Donoso,Drama,978-84-376-0535-7,Disponible
+Cambio de piel,Carlos Fuentes,Ficción experimental,978-84-376-0536-4,Disponible
+El recurso del método,Alejo Carpentier,Sátira política,978-84-376-0537-1,Disponible
+Abaddón el exterminador,Ernesto Sábato,Ficción apocalíptica,978-84-376-0538-8,Disponible
+Las armas secretas,Julio Cortázar,Cuentos,978-84-376-0539-5,Disponible
+La tía Julia y el escribidor,Mario Vargas Llosa,Comedia,978-84-376-0540-1,Disponible
+Historia de Mayta,Mario Vargas Llosa,Ficción política,978-84-376-0541-8,Disponible
+El jardín de senderos que se bifurcan,Jorge Luis Borges,Cuentos fantásticos,978-84-376-0542-5,Disponible
+Coronación,José Donoso,Drama familiar,978-84-376-0543-2,Disponible
+La arpa y la sombra,Alejo Carpentier,Novela histórica,978-84-376-0544-9,Disponible
+2666,Roberto Bolaño,Ficción contemporánea,978-84-376-0545-6,Disponible
+Estrella distante,Roberto Bolaño,Thriller literario,978-84-376-0546-3,Disponible
+Nocturno de Chile,Roberto Bolaño,Ficción histórica,978-84-376-0547-0,Disponible
+Los jefes,Mario Vargas Llosa,Cuentos,978-84-376-0548-7,Disponible
+El perseguidor,Julio Cortázar,Cuento largo,978-84-376-0549-4,Disponible
+Tres tristes tigres,Guillermo Cabrera Infante,Ficción experimental,978-84-376-0550-0,Disponible
+El beso de la mujer araña,Manuel Puig,Drama,978-84-376-0551-7,Disponible
+Boquitas pintadas,Manuel Puig,Melodrama,978-84-376-0552-4,Disponible
+La traición de Rita Hayworth,Manuel Puig,Autobiográfica,978-84-376-0553-1,Disponible
+El nombre de la rosa,Umberto Eco,Misterio medieval,978-84-376-0554-8,Disponible
+Crónicas marcianas,Ray Bradbury,Ciencia ficción,978-84-376-0555-5,Disponible
+El perfume,Patrick Süskind,Thriller psicológico,978-84-376-0556-2,Disponible
+Como agua para chocolate,Laura Esquivel,Realismo mágico,978-84-376-0557-9,Disponible
+La casa de Bernarda Alba,Federico García Lorca,Teatro,978-84-376-0558-6,Disponible
+Bodas de sangre,Federico García Lorca,Teatro,978-84-376-0559-3,Disponible
+Yerma,Federico García Lorca,Teatro,978-84-376-0560-9,Disponible
+Romancero gitano,Federico García Lorca,Poesía,978-84-376-0561-6,Disponible
+Poeta en Nueva York,Federico García Lorca,Poesía,978-84-376-0562-3,Disponible
+Veinte poemas de amor y una canción desesperada,Pablo Neruda,Poesía,978-84-376-0563-0,Disponible
+Canto general,Pablo Neruda,Poesía épica,978-84-376-0564-7,Disponible
+Residencia en la tierra,Pablo Neruda,Poesía,978-84-376-0565-4,Disponible
+Confieso que he vivido,Pablo Neruda,Autobiografía,978-84-376-0566-1,Disponible
+La vorágine,José Eustasio Rivera,Novela de la selva,978-84-376-0567-8,Disponible
+María,Jorge Isaacs,Romance,978-84-376-0568-5,Disponible
+Doña Bárbara,Rómulo Gallegos,Novela criollista,978-84-376-0569-2,Disponible
+Huasipungo,Jorge Icaza,Indigenismo,978-84-376-0570-8,Disponible
+El mundo es ancho y ajeno,Ciro Alegría,Indigenismo,978-84-376-0571-5,Disponible
+Los de abajo,Mariano Azuela,Revolución mexicana,978-84-376-0572-2,Disponible
+Al filo del agua,Agustín Yáñez,Realismo,978-84-376-0573-9,Disponible
+La muerte de Artemio Cruz,Carlos Fuentes,Novela histórica,978-84-376-0574-6,Disponible
+El gesticulador,Rodolfo Usigli,Teatro,978-84-376-0575-3,Disponible
+Los albañiles,Vicente Leñero,Teatro,978-84-376-0576-0,Disponible
+El eterno femenino,Rosario Castellanos,Teatro feminista,978-84-376-0577-7,Disponible
+Balún Canán,Rosario Castellanos,Indigenismo,978-84-376-0578-4,Disponible
+Oficio de tinieblas,Rosario Castellanos,Drama social,978-84-376-0579-1,Disponible
+Album de familia,Rosario Castellanos,Cuentos,978-84-376-0580-7,Disponible
+Hasta no verte Jesús mío,Elena Poniatowska,Testimonio,978-84-376-0581-4,Disponible
+La noche de Tlatelolco,Elena Poniatowska,Crónica,978-84-376-0582-1,Disponible
+Querido Diego te abraza Quiela,Elena Poniatowska,Novela epistolar,978-84-376-0583-8,Disponible
+Los rituales del caos,Carlos Monsiváis,Ensayo,978-84-376-0584-5,Disponible
+Amor perdido,Carlos Monsiváis,Ensayo cultural,978-84-376-0585-2,Disponible
+La región más transparente,Carlos Fuentes,Novela urbana,978-84-376-0586-9,Disponible
+Gringo viejo,Carlos Fuentes,Novela histórica,978-84-376-0587-6,Disponible
+Diana o la cazadora solitaria,Carlos Fuentes,Novela autobiográfica,978-84-376-0588-3,Disponible
+Cristóbal Nonato,Carlos Fuentes,Sátira social,978-84-376-0589-0,Disponible
+La frontera de cristal,Carlos Fuentes,Novela fronteriza,978-84-376-0590-6,Disponible
+Instinto de Inez,Carlos Fuentes,Ficción contemporánea,978-84-376-0591-3,Disponible
+Los años con Laura Díaz,Carlos Fuentes,Saga familiar,978-84-376-0592-0,Disponible
+En esto creo,Carlos Fuentes,Ensayo personal,978-84-376-0593-7,Disponible
+Contra Bush,Carlos Fuentes,Ensayo político,978-84-376-0594-4,Disponible
+El espejo enterrado,Carlos Fuentes,Ensayo histórico,978-84-376-0595-1,Disponible
+Geografía infernal,Carlos Fuentes,Ensayo cultural,978-84-376-0596-8,Disponible
