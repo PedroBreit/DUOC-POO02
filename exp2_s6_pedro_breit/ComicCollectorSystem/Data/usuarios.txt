@@ -1,0 +1,2 @@
+10.111.222-3;Ana;Muñoz;Soto;912345678;Av. Siempre Viva 742;Providencia;comic2024
+12.345.678-9;Jose;Pérez;García;987654321;Calle Falsa 123;Santiago;clave123
