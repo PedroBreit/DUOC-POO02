@@ -1,1 +1,32 @@
+public class Main {
+   public static void main(String[] args) {
+      // Crear e iniciar un subproceso
+      MiTarea tarea = new MiTarea();
+      Thread subproceso = new Thread(tarea);
+      subproceso.start();
 
+      // Lógica del hilo principal
+      for (int i = 0; i < 5; i++) {
+         System.out.println("Hilo principal: " + i);
+         try {
+            Thread.sleep(1000); // Esperar 1 segundo
+         } catch (InterruptedException e) {
+            e.printStackTrace();
+         }
+      }
+   }
+}
+
+class MiTarea implements Runnable {
+   public void run() {
+      // Lógica del subproceso
+      for (int i = 0; i < 5; i++) {
+         System.out.println("Subproceso: " + 1);
+         try {
+            Thread.sleep(1000); // Esperar 1 segundo
+         } catch (InterruptedException e) {
+            e.printStackTrace();
+         }
+      }
+   }
+}
