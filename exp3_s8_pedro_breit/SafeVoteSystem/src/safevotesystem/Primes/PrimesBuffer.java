@@ -20,7 +20,6 @@ public class PrimesBuffer {
         return prime;
     }
 
-    // Si necesitas exponer el conteo de primos en el buffer:
     public synchronized int getPrimesCount() {
         return buffer.getPrimesCount();
     }
